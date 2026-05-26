@@ -1,0 +1,66 @@
+def dec(x):
+    def  inner():
+        print("Start")
+        x()
+        print("End")
+    return inner
+@dec
+def greet():
+    prin t("Hello")
+greet()
+
+#2.question
+def dec(x):
+    def inner(name):
+        print("start")
+        x(name)
+        print("done")
+    return inner
+@dec
+def greet(name):
+    print("hello",name)
+greet("Ravi")
+
+
+#3question
+def dec(func):
+    def inner():
+        result = func()
+        return result * 2
+    return inner
+
+@dec
+def number():
+    return 30
+print(number())
+
+
+#4.question
+user_role="student"
+def check(func):
+    def inner():
+        if user_role=="admin":
+            func()
+        else:
+            print("access denied")
+    return inner
+@check
+def show():
+    print("welcome admin")
+show()
+
+
+#5.question
+def upper(func):
+    def inner():
+        return func().upper()
+    return inner
+@upper
+def get_msg():
+    return "Hello world"
+print(get_msg())
+
+
+
+
+
