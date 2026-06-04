@@ -1,5 +1,5 @@
 def dec(x):
-    def  inner():
+    def   inner():
         print("Start")
         x()
         print("End")
