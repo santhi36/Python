@@ -67,8 +67,6 @@ print("hello() result:", d.hello())
 print("\nMRO:")
 for cls in D.__mro__:
     print(cls.__name__)
-
-
 class A:
     def hello(self):
         return "A"
